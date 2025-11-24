@@ -5,8 +5,8 @@ const sheetURL =
 "https://docs.google.com/spreadsheets/d/e/2PACX-1vSzQ3NQEMYkrIgKdM3jvY0BWocRlLst3mIDdjY7dxSdDGHZO13jiTs_nR5AQMiRDd2xei2ivWW5iXyd/pub?gid=114836263&single=true&output=csv";
 
 // WEBHOOK DEFINITIVO
-const webhookURL =
-"https://script.google.com/macros/s/AKfycbyirx6BJAj5c0C1CACcpURNo3FLU1HbATfbgnQJaEJ6AckC5k2qoEVbkqSWjX2PxsE78w/exec";
+const webhookURL = "https://script.google.com/macros/s/AKfycybolE0n8Jj1R3Ols6iDzWF2bCzf8PEoyLU2Ynlfh-_dEd2m3tPloj4IM8oikyV-vUS1Yg/exec";
+
 
 /****************************************************
  * NORMALIZAR
@@ -144,3 +144,4 @@ document.addEventListener("DOMContentLoaded", async () => {
         });
     }
 });
+
