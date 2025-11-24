@@ -111,11 +111,8 @@ function activarEnvioResultados() {
 
         console.log("ENVIANDO:", payload);
 
-        await fetch(webhookURL, {
-            method: "POST",
-            body: JSON.stringify(payload),
-            headers: { "Content-Type": "application/json" }
-        });
+        await fetch(webhookURL + "?json=" + encodeURIComponent(JSON.stringify(payload)));
+
 
         alert("✔ Resultado enviado correctamente");
         form.reset();
@@ -146,6 +143,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         });
     }
 });
+
 
 
 
