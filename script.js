@@ -6,7 +6,7 @@ const sheetURL =
 
 // WEBHOOK DEFINITIVO
 
-const webhookURL = https://script.google.com/macros/s/AKfycbxRHzcHd12LScbiysKvCmMomT4LRX3kAeKKz4Pk8tHYGhXMbffUghNMYm_zK3qpH135Hg/exec
+const webhookURL = "https://script.google.com/macros/s/AKfycbwtEgf_i0xiFHLdYOn65nhIlQdZ7uaVP324EwLrArGKw51AHqzdpiKXsbkTqKCUygDJUQ/exec";
 
 
 
@@ -146,6 +146,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         });
     }
 });
+
 
 
 
