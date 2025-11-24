@@ -5,7 +5,7 @@ const sheetURL =
 "https://docs.google.com/spreadsheets/d/e/2PACX-1vSzQ3NQEMYkrIgKdM3jvY0BWocRlLst3mIDdjY7dxSdDGHZO13jiTs_nR5AQMiRDd2xei2ivWW5iXyd/pub?gid=114836263&single=true&output=csv";
 
 // WEBHOOK DEFINITIVO
-const webhookURL = "https://script.google.com/macros/s/AKfycbxABsdN0zc6f2nUqg1fz6SYyt85921HVQ_cMw6t5MwzSrS_tRD1Q37xm4bf43TfZKrIQQ/exec";
+https://script.google.com/macros/s/AKfycbxRHzcHd12LScbiysKvCmMomT4LRX3kAeKKz4Pk8tHYGhXMbffUghNMYm_zK3qpH135Hg/exec
 
 
 
@@ -145,5 +145,6 @@ document.addEventListener("DOMContentLoaded", async () => {
         });
     }
 });
+
 
 
