@@ -111,13 +111,16 @@ function activarEnvioResultados() {
 
         console.log("ENVIANDO:", payload);
 
-        await fetch(webhookURL + "?json=" + encodeURIComponent(JSON.stringify(payload)));
-
+        // 🚀 NUEVO FETCH SIN CORS
+        await fetch(
+            webhookURL + "?json=" + encodeURIComponent(JSON.stringify(payload))
+        );
 
         alert("✔ Resultado enviado correctamente");
         form.reset();
     });
 }
+
 
 /****************************************************
  * INICIO
