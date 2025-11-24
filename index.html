@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Torneo Jóvenes Tenis & Pádel</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+    <header>
+        <h1>Torneo de Tenis y Pádel (18-30 años)</h1>
+        <p>3 divisiones: Bronce · Plata · Oro</p>
+    </header>
+
+    <section class="sports">
+        <h2>Deportes</h2>
+
+        <div class="cards">
+            <div class="card">
+                <h3>Tenis</h3>
+                <p>3 Divisiones disponibles</p>
+            </div>
+
+            <div class="card">
+                <h3>Pádel</h3>
+                <p>3 Divisiones disponibles</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="divisiones">
+        <h2>Divisiones y Premios</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>División</th>
+                    <th>Precio inscripción</th>
+                    <th>Premio Subcampeón</th>
+                    <th>Premio Campeón</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Bronce</td>
+                    <td>8 €</td>
+                    <td>10 €</td>
+                    <td>15 €</td>
+                </tr>
+                <tr>
+                    <td>Plata</td>
+                    <td>10 €</td>
+                    <td>15 €</td>
+                    <td>20 €</td>
+                </tr>
+                <tr>
+                    <td>Oro</td>
+                    <td>12 €</td>
+                    <td>20 €</td>
+                    <td>30 €</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+     <!-- CLASIFICACIÓN -->
+    <section class="clasificacion">
+    <h2>Clasificación del Torneo</h2>
+
+    <div class="filtros-clasificacion">
+        <h3>Tenis</h3>
+        <a href="tenis_bronce.html" class="boton-link" target="_blank">Tenis Bronce</a>
+        <a href="tenis_plata.html" class="boton-link" target="_blank">Tenis Plata</a>
+        <a href="tenis_oro.html" class="boton-link" target="_blank">Tenis Oro</a>
+
+        <h3 style="margin-top:25px;">Pádel</h3>
+        <a href="padel_bronce.html" class="boton-link" target="_blank">Pádel Bronce</a>
+        <a href="padel_plata.html" class="boton-link" target="_blank">Pádel Plata</a>
+        <a href="padel_oro.html" class="boton-link" target="_blank">Pádel Oro</a>
+    </div>
+</section>
+
+
+
+    <!-- SECCIÓN DE INSCRIPCIÓN -->
+    <section class="inscripcion">
+        <h2>Inscripción al Torneo</h2>
+        <p>Haz clic en el siguiente botón para apuntarte:</p>
+
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdqvvYCO-Nud6J1lgK1ig649ekKRdj-Ul4jSpTjyjN-BjPpgA/viewform?usp=header" 
+           target="_blank" class="boton-inscripcion">
+            Apuntarme ahora
+        </a>
+    </section>
+
+    <!-- FORMULARIO PARA ENVIAR RESULTADOS -->
+    <section class="formulario">
+        <h2>Enviar resultados</h2>
+        <p>Los jugadores pueden enviar los resultados del partido usando el siguiente formulario.</p>
+
+        <form id="resultForm">
+
+    <label for="deporte">Deporte:</label>
+    <select id="deporte" required>
+        <option value="">Selecciona deporte</option>
+        <option value="Tenis">Tenis</option>
+        <option value="Pádel">Pádel</option>
+    </select>
+
+    <label for="division">División:</label>
+    <select id="division" required>
+        <option value="Bronce">Bronce</option>
+        <option value="Plata">Plata</option>
+        <option value="Oro">Oro</option>
+    </select>
+
+    <label for="jugadorA">Jugador A:</label>
+    <select id="jugadorA" required>
+        <option value="">Selecciona jugador</option>
+    </select>
+
+    <label for="jugadorB">Jugador B:</label>
+    <select id="jugadorB" required>
+        <option value="">Selecciona jugador</option>
+    </select>
+
+    
+
+    <h3>Resultado del partido</h3>
+
+    <label>Set 1</label>
+    <input type="text" id="set1" placeholder="Ej: 6-4" required>
+
+    <label>Set 2</label>
+    <input type="text" id="set2" placeholder="Ej: 3-6" required>
+
+    <label>Set 3 (opcional)</label>
+    <input type="text" id="set3" placeholder="Ej: 7-5">
+
+    <button type="submit">Enviar resultados</button>
+
+</form>
+
+    </section>
+
+    <footer>
+        <p>© 2025 Torneo Jóvenes. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
