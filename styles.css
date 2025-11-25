@@ -1,426 +1,96 @@
-/* ------------------------------
-   1. VARIABLES DE COLOR / RESET
------------------------------- */
-:root {
-  --color-bg: #f3f4f6;
-  --color-surface: #ffffff;
-  --color-surface-soft: #f9fafb;
-  --color-primary: #1d4ed8;
-  --color-primary-dark: #1e40af;
-  --color-accent: #f59e0b;
-  --color-border: #e5e7eb;
-  --color-border-strong: #d1d5db;
-  --color-text: #111827;
-  --color-text-soft: #6b7280;
-  --shadow-soft: 0 10px 25px rgba(15, 23, 42, 0.07);
-  --radius-lg: 16px;
-  --radius-md: 10px;
-}
-
-/* Reset básico */
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-html, body {
-  margin: 0;
-  padding: 0;
-}
-
+/* ---------------------- */
+/* ESTILOS GENERALES      */
+/* ---------------------- */
 body {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  background: radial-gradient(circle at top left, #e0f2fe, #f3f4f6 40%, #e5e7eb 80%);
-  color: var(--color-text);
-  min-height: 100vh;
-}
-
-/* Contenedor genérico */
-.wrapper {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 96px 16px 40px;
-}
-
-/* ------------------------------
-   2. CABECERA / NAV
------------------------------- */
-header {
-  position: sticky;
-  top: 0;
-  z-index: 20;
-  backdrop-filter: blur(12px);
-  background: linear-gradient(
-    to bottom,
-    rgba(248, 250, 252, 0.95),
-    rgba(248, 250, 252, 0.8),
-    transparent
-  );
-  border-bottom: 1px solid rgba(209, 213, 219, 0.7);
-}
-
-.header-inner {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 14px 16px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 16px;
-}
-
-.logo-title {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.logo-badge {
-  width: 36px;
-  height: 36px;
-  border-radius: 999px;
-  background: radial-gradient(circle at 30% 30%, #bfdbfe, #1d4ed8);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #eff6ff;
-  font-weight: 700;
-  font-size: 18px;
-}
-
-.header-text h1 {
-  font-size: 20px;
-  margin: 0;
-}
-
-.header-text span {
-  display: block;
-  font-size: 12px;
-  color: var(--color-text-soft);
-}
-
-/* Navegación de botones (ya existía como .nav-buttons) */
-.nav-buttons {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  align-items: center;
-  justify-content: flex-end;
-}
-
-/* Enlaces tipo botón */
-.boton-link,
-.nav-buttons a {
-  text-decoration: none;
-  padding: 8px 14px;
-  border-radius: 999px;
-  border: 1px solid transparent;
-  font-size: 14px;
-  color: var(--color-text-soft);
-  background: transparent;
-  transition: all 0.18s ease;
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-}
-
-.boton-link.primary,
-.nav-buttons a.primary {
-  background: var(--color-primary);
-  color: #ffffff;
-  border-color: var(--color-primary);
-}
-
-.boton-link:hover,
-.nav-buttons a:hover {
-  background: rgba(37, 99, 235, 0.06);
-  color: var(--color-primary-dark);
-}
-
-.boton-link.primary:hover,
-.nav-buttons a.primary:hover {
-  background: var(--color-primary-dark);
-}
-
-/* ------------------------------
-   3. SECCIONES PRINCIPALES
------------------------------- */
-
-/* Hero / Intro */
-.hero {
-  margin-bottom: 28px;
-}
-
-.hero-card {
-  background: linear-gradient(135deg, #eff6ff, #ffffff);
-  border-radius: var(--radius-lg);
-  padding: 24px 24px 20px;
-  box-shadow: var(--shadow-soft);
-  border: 1px solid #e5e7eb;
-}
-
-.hero h2 {
-  margin: 0 0 8px;
-  font-size: 24px;
-}
-
-.hero p {
-  margin: 0;
-  color: var(--color-text-soft);
-  font-size: 14px;
-}
-
-/* Bloque de 2 columnas: info + formulario */
-.grid-main {
-  display: grid;
-  grid-template-columns: minmax(0, 1.6fr) minmax(0, 1.4fr);
-  gap: 24px;
-  align-items: flex-start;
-}
-
-/* Tarjetas informativas */
-.info-card {
-  background: var(--color-surface);
-  border-radius: var(--radius-lg);
-  padding: 20px 20px 18px;
-  border: 1px solid var(--color-border);
-  box-shadow: var(--shadow-soft);
-}
-
-.info-card h3 {
-  margin: 0 0 12px;
-  font-size: 18px;
-}
-
-.info-card p {
-  margin: 0 0 8px;
-  color: var(--color-text-soft);
-  font-size: 14px;
-}
-
-.info-pill-row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin-top: 10px;
-}
-
-.info-pill {
-  padding: 5px 10px;
-  border-radius: 999px;
-  background: var(--color-surface-soft);
-  border: 1px solid var(--color-border);
-  font-size: 12px;
-  color: var(--color-text-soft);
-}
-
-/* ------------------------------
-   4. FORMULARIO
------------------------------- */
-
-.form-card {
-  background: var(--color-surface);
-  border-radius: var(--radius-lg);
-  padding: 20px 20px 18px;
-  border: 1px solid var(--color-border);
-  box-shadow: var(--shadow-soft);
-}
-
-.form-card h3 {
-  margin: 0 0 12px;
-  font-size: 18px;
-}
-
-/* Estilo general del form (aplica al <form> que ya tienes) */
-form {
-  display: grid;
-  gap: 12px;
-}
-
-/* Agrupación label + input/select */
-form label {
-  font-size: 13px;
-  font-weight: 500;
-  color: var(--color-text-soft);
-  margin-bottom: 4px;
-  display: block;
-}
-
-form input,
-form select,
-form textarea {
-  width: 100%;
-  padding: 9px 10px;
-  border-radius: 10px;
-  border: 1px solid var(--color-border-strong);
-  font-size: 14px;
-  outline: none;
-  background: #f9fafb;
-  transition: border-color 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
-}
-
-form textarea {
-  min-height: 60px;
-  resize: vertical;
-}
-
-form input:focus,
-form select:focus,
-form textarea:focus {
-  border-color: var(--color-primary);
-  background: #ffffff;
-  box-shadow: 0 0 0 1px rgba(37, 99, 235, 0.25);
-}
-
-/* Botón principal */
-button,
-input[type="submit"] {
-  border: none;
-  border-radius: 999px;
-  padding: 10px 18px;
-  font-size: 15px;
-  font-weight: 600;
-  cursor: pointer;
-  background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
-  color: #ffffff;
-  box-shadow: 0 8px 18px rgba(37, 99, 235, 0.35);
-  transition: transform 0.1s ease, box-shadow 0.1s ease, filter 0.1s ease;
-}
-
-button:hover,
-input[type="submit"]:hover {
-  transform: translateY(-1px);
-  filter: brightness(1.03);
-}
-
-button:active,
-input[type="submit"]:active {
-  transform: translateY(0);
-  box-shadow: 0 4px 10px rgba(15, 23, 42, 0.25);
-}
-
-/* Texto pequeño bajo el botón (si lo hubiera) */
-.form-helper {
-  font-size: 12px;
-  color: var(--color-text-soft);
-  margin-top: 4px;
-}
-
-/* ------------------------------
-   5. TABLAS DE CLASIFICACIÓN
-   (oro.html, plata.html, etc)
------------------------------- */
-
-.table-card {
-  max-width: 900px;
-  margin: 32px auto 0;
-  background: var(--color-surface);
-  border-radius: var(--radius-lg);
-  padding: 20px 20px 16px;
-  border: 1px solid var(--color-border);
-  box-shadow: var(--shadow-soft);
+    margin: 0;
+    font-family: "Inter", sans-serif;
+    background: #f4f7fb;
+    color: #222;
 }
 
 h1, h2, h3 {
-  font-weight: 700;
+    margin: 0 0 15px;
 }
 
-h1 {
-  font-size: 26px;
-  margin: 16px 0 10px;
-  text-align: center;
+/* Header */
+.header {
+    background: linear-gradient(to right, #004aad, #0078ff);
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
 }
 
-h1 + p {
-  text-align: center;
-  margin: 0 0 10px;
-  color: var(--color-text-soft);
+.subtitle {
+    opacity: .9;
 }
 
-/* Tablas genéricas (afecta a tus tablas existentes) */
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 8px;
-  font-size: 14px;
+/* Contenedor principal */
+.container {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 0 20px;
 }
 
-thead {
-  background: #eff6ff;
+/* Tarjetas (cards) */
+.card {
+    background: white;
+    padding: 25px;
+    margin-bottom: 35px;
+    border-radius: 12px;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.08);
 }
 
-thead th {
-  text-align: left;
-  padding: 10px 10px;
-  font-weight: 600;
-  color: #1e293b;
-  border-bottom: 1px solid var(--color-border);
+/* Tabla */
+.tabla {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
 }
 
-tbody tr:nth-child(even) {
-  background: #f9fafb;
+.tabla th {
+    background: #0078ff;
+    color: white;
+    padding: 12px;
 }
 
-tbody tr:hover {
-  background: #eef2ff;
+.tabla td {
+    padding: 10px;
+    border-bottom: 1px solid #e6e6e6;
 }
 
-td {
-  padding: 8px 10px;
-  border-bottom: 1px solid var(--color-border);
-  color: var(--color-text);
+/* Formulario */
+.form-group {
+    margin-bottom: 20px;
 }
 
-/* Posición / ranking si tienes una primera columna de puesto */
-td:first-child {
-  font-weight: 600;
+input, select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
 }
 
-/* ------------------------------
-   6. FOOTER
------------------------------- */
-
-footer {
-  max-width: 1100px;
-  margin: 24px auto 16px;
-  padding: 0 16px;
-  font-size: 12px;
-  color: var(--color-text-soft);
-  display: flex;
-  justify-content: space-between;
-  gap: 10px;
-  flex-wrap: wrap;
+.btn {
+    width: 100%;
+    padding: 15px;
+    font-size: 17px;
+    background: #004aad;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: .2s;
 }
 
-footer a {
-  color: var(--color-primary);
-  text-decoration: none;
+.btn:hover {
+    background: #00357c;
 }
 
-footer a:hover {
-  text-decoration: underline;
-}
-
-/* ------------------------------
-   7. RESPONSIVE
------------------------------- */
-
-@media (max-width: 768px) {
-  .header-inner {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .grid-main {
-    grid-template-columns: 1fr;
-  }
-
-  .wrapper {
-    padding-top: 88px;
-  }
-
-  h1 {
-    font-size: 22px;
-  }
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 25px;
+    background: #f1f1f1;
+    margin-top: 40px;
+    font-size: 14px;
 }
